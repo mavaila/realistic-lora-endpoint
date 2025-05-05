@@ -1,11 +1,11 @@
 import replicate
 
-def predict(prompt, lora_scale=0.7):
+def predict(prompt: str):
     output = replicate.run(
-        "stability-ai/sdxl",
+        "stability-ai/sdxl:latest",
         input={
             "prompt": prompt,
-            "lora": [{"id": "mavaila/personamau", "scale": lora_scale}]
+            "lora": "mavaila/personamau"
         }
     )
     return output
