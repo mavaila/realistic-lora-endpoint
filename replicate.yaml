@@ -1,14 +1,1 @@
-name: personamau-endpoint
-version: "1.0"
-input:
-  prompt:
-    type: string
-    default: "a portrait of a woman"
-  lora_scale:
-    type: number
-    default: 0.7
-    description: "Controla la intensidad del LoRA"
-
-model: stability-ai/sdxl
-lora:
-  - mavaila/personamau:latest
+predict: predict.py:predict
